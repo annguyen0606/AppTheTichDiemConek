@@ -39,12 +39,12 @@ public class ReadNFCActivity extends AppCompatActivity implements View.OnClickLi
     DataProvider dataProvider;
     int diemTichHienTai = 0;
     private static SwipeRefreshLayout loadDataCustomer;//Load Data from Server
-    @SuppressLint("RestrictedApi")
+    //@SuppressLint("RestrictedApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_read_n_f_c);
-        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         AnhXa();
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);

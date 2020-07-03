@@ -26,15 +26,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".CheckCustomerActivity"></activity>
-        <activity android:name=".ReadNFCActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="Read NFC"/>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ReadNFCActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+
         </activity>
     </application>
 

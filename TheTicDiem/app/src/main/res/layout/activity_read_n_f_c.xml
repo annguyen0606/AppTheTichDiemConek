@@ -1,127 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="20dp"
     tools:context=".ReadNFCActivity">
+    <ImageView
+        android:src="@drawable/ic_conek3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ImageView>
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/pullToLoadData"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <LinearLayout
-            android:orientation="vertical"
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <EditText
-                android:focusable="false"
-                android:hint="UID"
-                android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:id="@+id/edtUIDTAG"
-                android:drawableLeft="@drawable/ic_card_24"
-                android:textSize="18dp"
-                android:textColor="#000"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></EditText>
-            <EditText
-                android:id="@+id/edtNameCustomer"
-                android:gravity="center"
-                android:textSize="18dp"
-                android:drawableLeft="@drawable/ic_name_account"
-                android:hint="Name"
-                android:textColor="#000"
-                android:singleLine="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></EditText>
-            <EditText
-                android:id="@+id/edtAddressCustomer"
-                android:gravity="center"
-                android:textSize="18dp"
-                android:textColor="#000"
-                android:drawableLeft="@drawable/ic_place"
-                android:hint="Address"
-                android:singleLine="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></EditText>
-            <EditText
-                android:id="@+id/edtPhoneCustomer"
-                android:gravity="center"
-                android:inputType="number"
-                android:textSize="18dp"
-                android:textColor="#000"
-                android:drawableLeft="@drawable/ic_contact_phone"
-                android:hint="Phone Number"
-                android:singleLine="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></EditText>
-            <EditText
-                android:id="@+id/edtPricePay"
-                android:gravity="center"
-                android:inputType="number"
-                android:textSize="18dp"
-                android:textColor="#000"
-                android:drawableLeft="@drawable/ic_money_pay"
-                android:text="0"
-                android:singleLine="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></EditText>
-            <EditText
-                android:id="@+id/edtAccumulatepoints"
-                android:gravity="center"
-                android:inputType="number"
-                android:textSize="18dp"
-                android:textColor="#000"
-                android:focusable="false"
-                android:drawableLeft="@drawable/ic_plus_one"
-                android:text="0"
-                android:singleLine="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></EditText>
-            <EditText
-                android:id="@+id/edtConversionRate"
-                android:gravity="center"
-                android:inputType="number"
-                android:textSize="18dp"
-                android:textColor="#000"
-                android:focusable="false"
-                android:drawableLeft="@drawable/ic_baseline_transform_24"
-                android:text="0"
-                android:singleLine="true"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></EditText>
-            <TextView
-                android:id="@+id/tvCurrentPoints"
-                android:text="0"
-                android:gravity="center"
-                android:textSize="18dp"
-                android:drawableLeft="@drawable/ic_plus_one"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></TextView>
             <LinearLayout
-                android:weightSum="2"
-                android:layout_marginTop="10dp"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <Button
-                    android:id="@+id/btnRegistration"
-                    android:layout_weight="1"
-                    android:text="Registration"
+                android:layout_height="match_parent">
+                <TextView
+                    android:textColor="#075593"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textSize="40dp"
+                    android:text="Hệ Thống Tích Điểm Conek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+                <EditText
+                    android:focusable="false"
+                    android:hint="UID"
+                    android:gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/edtUIDTAG"
+                    android:drawableLeft="@drawable/ic_card_24"
+                    android:textSize="18dp"
                     android:textColor="#000"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"></Button>
-                <Button
-                    android:id="@+id/btnConfirmPoints"
-                    android:text="Confirm Points"
-                    android:layout_weight="1"
+                    android:layout_height="wrap_content"></EditText>
+                <EditText
+                    android:id="@+id/edtNameCustomer"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:drawableLeft="@drawable/ic_name_account"
+                    android:hint="Name"
                     android:textColor="#000"
+                    android:singleLine="true"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"></Button>
+                    android:layout_height="wrap_content"></EditText>
+                <EditText
+                    android:id="@+id/edtAddressCustomer"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:textColor="#000"
+                    android:drawableLeft="@drawable/ic_place"
+                    android:hint="Address"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></EditText>
+                <EditText
+                    android:id="@+id/edtPhoneCustomer"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textSize="18dp"
+                    android:textColor="#000"
+                    android:drawableLeft="@drawable/ic_contact_phone"
+                    android:hint="Phone Number"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></EditText>
+                <EditText
+                    android:id="@+id/edtPricePay"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textSize="18dp"
+                    android:textColor="#000"
+                    android:drawableLeft="@drawable/ic_money_pay"
+                    android:text="0"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></EditText>
+                <EditText
+                    android:id="@+id/edtAccumulatepoints"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textSize="18dp"
+                    android:textColor="#000"
+                    android:focusable="false"
+                    android:drawableLeft="@drawable/ic_plus_one"
+                    android:text="0"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></EditText>
+                <EditText
+                    android:id="@+id/edtConversionRate"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textSize="18dp"
+                    android:textColor="#000"
+                    android:focusable="false"
+                    android:drawableLeft="@drawable/ic_baseline_transform_24"
+                    android:text="0"
+                    android:singleLine="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></EditText>
+                <TextView
+                    android:id="@+id/tvCurrentPoints"
+                    android:text="0"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:drawableLeft="@drawable/ic_plus_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+                <LinearLayout
+                    android:weightSum="2"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/btnRegistration"
+                        android:layout_weight="1"
+                        android:text="Registration"
+                        android:textColor="#000"
+                        android:background="@drawable/button_main_standard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></Button>
+                    <Button
+                        android:id="@+id/btnConfirmPoints"
+                        android:text="Confirm Points"
+                        android:layout_weight="1"
+                        android:textColor="#000"
+                        android:background="@drawable/button_main_standard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></Button>
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
+        </ScrollView>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
-</RelativeLayout>
+</FrameLayout>
